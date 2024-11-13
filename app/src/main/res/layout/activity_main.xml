@@ -7,30 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="15dp"
         android:background="@color/facebook_blue"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp"
         tools:ignore="MissingConstraints">
 
         <!-- Facebook Icon -->
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/facebooklogo"
-             />
+            android:src="@drawable/facebooklogo" />
 
         <!-- Espaciado -->
         <Space
@@ -41,11 +32,50 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="1dp"
             android:text="Sign In with Facebook"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@color/apple_black"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <!-- Facebook Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/applelogo"
+            />
+
+        <!-- Espaciado -->
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="0dp" />
+
+        <!-- Texto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In with Apple"
             android:textSize="22sp"
             android:textColor="@android:color/white"
             android:fontFamily="sans-serif"
             android:lineSpacingExtra="1dp" />
+
+
     </LinearLayout>
 
 
